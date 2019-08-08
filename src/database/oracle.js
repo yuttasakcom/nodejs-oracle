@@ -3,8 +3,8 @@ import oracledb from 'oracledb'
 export default async () => {
 
   return await oracledb.getConnection(  {
-    user : "system",
-    password : "oracle",
-    connectString : "localhost/xe"
-  });
+    user : process.env.ORACLE_USER,
+    password : process.env.ORACLE_PASSWORD,
+    connectString : process.env.ORACLE_CONNECT_STRING
+  })
 }

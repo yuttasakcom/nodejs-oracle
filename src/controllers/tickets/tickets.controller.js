@@ -8,8 +8,8 @@ class Tickets {
     const connection = await connectOracle()
 
     try {
-      const result = await connection.execute("select * from HR.JOBS");
-      console.log(result.rows);
+      const result = await connection.execute(`select * from CFM2.U_WF_ACTIVE where READ_FLAG=:rf`, ['Y'], {maxRows: 10})
+      console.log(result.rows.length);
     } catch (err) {
       console.error(err);
     } finally {
