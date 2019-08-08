@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@spksoft/koa-decorator": "^1.2.2",
-    "koa": "^2.7.0"
+    "koa": "^2.7.0",
+    "oracledb": "^4.0.0"
   }
 }
